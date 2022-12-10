@@ -1,0 +1,149 @@
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --blue: #1e90ff ;
+    --white: #0d0d0d;
+    --yellowish: #F7c600;
+
+}
+
+.container{
+    height: 100vh;
+    font-family: 'Noto Serif', serif;
+    font-weight: 800;
+    font-size: 1em;
+    color:var(--yellowish);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "content"
+    "Education"
+    "Project"
+    "Experience"
+    "Blogs"
+    "footer";
+    gap: 10px;
+}
+#navbar {
+    display: grid;
+    min-height: 50px;
+    grid-auto-flow: column;
+    background-color: #4b4949;;
+    grid-gap: 1.5em;
+    padding: 0 40px;
+  }
+  
+  #logo {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  
+  #links {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    font-family: "Open Sans", sans-serif;
+  }
+  .name {
+    font-size: 25px;
+    color: #d9d0a1;
+}
+h1{
+    color: #d9d0a1;
+}
+  #links a {
+    text-decoration: none;
+    color: #d9d0a1;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  #links a:hover {
+    color: #0474bc;
+  }
+main{
+    background: #252222;
+    padding: var(--main-padding);
+    grid-area: main;
+}
+/*#sidebar{
+    background: #5ecb62;
+    padding: var(--main-padding);
+    grid-area: sidebar;
+} */
+#content{
+    background: #030303;
+    padding: var(--main-padding);
+    grid-area: content;
+}
+#Education{
+    background:#030303;
+    padding: var(--main-padding);
+    grid-area: Education;
+}
+#Project{
+    background:#030303;
+    padding:var(--main-padding) ;
+    grid-area: Project;
+}
+#Experience{
+    background: #030303;
+    padding: var(--main-padding);
+    grid-area: Experience;
+}
+#Blogs{
+    background:#030303;
+    padding: var(--main-padding);
+    grid-area: Blogs;
+}
+#footer{
+    background:#030303;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    grid-area: footer;
+}
+.square {
+    border-style: solid;
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    margin-left: 200px;
+}
+p1{
+    padding-left: 200px;
+}
+@media only screen and (max-width:500px){
+    
+    .container{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "content"
+    "Education"
+    "Project"
+    "Experience"
+    "Blogs"
+    "footer";
+    gap: 0.2em;
+    }
+    
+    #content{
+        background-color: #060606;
+    }
+    h1{
+        font-size: 15px;
+    }
+}
